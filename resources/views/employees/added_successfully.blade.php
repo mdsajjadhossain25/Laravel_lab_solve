@@ -10,8 +10,8 @@
                             {{ session('success') }}
                         @endif
                         <br>
-                        <a href="{{ route('view', $id) }}" class="btn btn-primary">
-                            View Book
+                        <a href="{{ route('view', $employee->id) }}" class="btn btn-primary">
+                            View Employee
                         </a>
                     </div>
                 </div>

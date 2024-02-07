@@ -50,7 +50,8 @@ class EmployeeController extends Controller
         return redirect()->route('updated_successfully', $employee->id)->with('success', 'Updated Successfully');
     }
     public function updateSuccess($id){
-        return view('employees.added_successfully')->with(['id', $id]);
+        $employee = Employee::find($id);
+        return view('employees.added_successfully', compact('employee'));
     }
 
     public function view($id){
