@@ -13,7 +13,7 @@ class EmployeeController extends Controller
     public function saveEmployee(Request $request){
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'designation' => 'required|string|max:255',
+            'designation' => 'required|string|max:50',
             'joining_date' => 'required|string|max:255',
             'salary' => 'required|numeric',
             'email' => 'required|email|max:255',
